@@ -9,12 +9,28 @@
 </head>
 <body>
     <script src="https://unpkg.com/vue@3"></script>
-    
     <div id="app">
+        
+        <header>
+            <h1>
+                Carosello creato con vue-js
+            </h1>
+        </header>
+
+        <div class="carousel">
+            <div class="previous-button" @click = "previousImage()">
+                click for previous image
+            </div>
+            <div class="carousell-item">
+               <img :src="images[activeIndex]" alt="immages">
+            </div>
+            <div class="next-button" @click = "nextImage()">
+                click for next immage
+            </div>
+        </div>
 
     </div>
     
-
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
